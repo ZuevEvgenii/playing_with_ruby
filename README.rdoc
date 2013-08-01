@@ -1,0 +1,3 @@
+== Project goals and objectives
+
+I want to know features of this language and implement different known algorithms. 
