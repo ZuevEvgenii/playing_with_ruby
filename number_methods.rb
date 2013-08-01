@@ -24,4 +24,20 @@ module NumberMethods
     k == first_half.to_i + second_half.to_i
   end
   #==========================================================
+  
+  #The median of a set of data values is the middle value of the data set when it has been arranged in ascending order.
+  def median(*list)
+    return nil if list.empty?
+
+    elements_count = list.count
+
+    mid = elements_count / 2
+    sorted_list = list.sort
+
+    if elements_count.odd?
+      sorted_list[mid]
+    else
+      (sorted_list[mid - 1] + sorted_list[mid]).to_f / 2.0
+    end
+  end
 end
