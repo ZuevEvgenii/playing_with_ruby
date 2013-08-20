@@ -40,4 +40,12 @@ module NumberMethods
       (sorted_list[mid - 1] + sorted_list[mid]).to_f / 2.0
     end
   end
+  
+  #Find number of times for each word appears in that string.
+  def occurrences(str)
+  	str.scan(/\w+/).inject(Hash.new(0)) do |build, word| 
+    	build[word.downcase] +=1
+    	build
+  	end
+  end
 end
